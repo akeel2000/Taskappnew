@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".NewNoteFragment"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/addNoteHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins"
+            android:text="Add Task."
+            android:textStyle="bold"
+            android:textColor="@color/lavender"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/addNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Enter the title"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_below="@id/addNoteHeading"
+            android:background="@drawable/edit"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:fontFamily="@font/poppins"/>
+
+        <EditText
+            android:id="@+id/addNoteDesc"
+            android:layout_width="388dp"
+            android:layout_height="246dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="157dp"
+            android:background="@drawable/edit"
+            android:fontFamily="More Fonts..."
+            android:gravity="top"
+            android:hint="Enter the description"
+            android:padding="12dp"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priorityMenu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="386dp"
+            android:layout_height="109dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="437dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="173dp"
+            android:background="@drawable/edit"
+            android:hint="Priority"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <AutoCompleteTextView
+                android:id="@+id/priorityDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="531dp"
+                android:layout_marginBottom="81dp"
+                android:background="@drawable/edit"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dueDateMenu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="391dp"
+            android:layout_height="105dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="560dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="54dp"
+            android:background="@drawable/edit"
+            android:hint="Due Date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priorityMenu">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/dueDateDropdown"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:layout_marginTop="613dp"
+                android:layout_marginBottom="46dp"
+                android:background="@drawable/edit"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+</layout>
